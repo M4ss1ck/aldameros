@@ -48,6 +48,14 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: "gatsby-plugin-svgr-loader",
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
