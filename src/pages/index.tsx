@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <Seo lang={language} title={t("My CV")} />
+      <Seo lang={language} title={t("Aldameros")} />
       <main className="container flex flex-col items-center justify-center w-full mx-auto text-primario bg-fondo">
         <h1>Aldameros</h1>
       </main>
