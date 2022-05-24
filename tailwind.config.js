@@ -16,6 +16,7 @@ module.exports = {
     },
   },
   plugins: [
+    require("daisyui"),
     require("tailwindcss-themer")({
       defaultTheme: {
         extend: {
