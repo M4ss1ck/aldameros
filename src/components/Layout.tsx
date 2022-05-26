@@ -6,7 +6,7 @@ const Layout: React.FC = ({ children }) => {
   return (
     <div className="w-full overflow-none">
       <Header />
-      <main className="container flex flex-col items-center min-h-full px-2">
+      <main className="container flex flex-col items-center justify-center min-h-full px-2 mx-auto">
         {children}
       </main>
       <Footer />
