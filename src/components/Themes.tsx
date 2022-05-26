@@ -54,13 +54,14 @@ const Themes: React.FC = () => {
     setTheme(theme)
     document.documentElement.classList.add("theme-transition")
     document.documentElement.setAttribute("data-theme", theme)
+    localStorage.setItem("theme", theme)
     window.setTimeout(function () {
       document.documentElement.classList.remove("theme-transition")
     }, 1000)
   }
 
   return (
-    <div className="relative flex flex-row items-center justify-center ml-4 mr-auto">
+    <div className="relative flex flex-row items-center justify-center ml-4 mr-auto bg-opacity-100">
       <Listbox value={theme} onChange={handleChange}>
         <div className="relative">
           <Listbox.Label hidden>Select a theme</Listbox.Label>
