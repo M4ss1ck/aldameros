@@ -63,7 +63,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <Link className="btn btn-info" to="/">
+          <Link className="hidden sm:btn btn-info" to="/">
             Aldameros
           </Link>
 
