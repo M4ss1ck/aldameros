@@ -5,7 +5,7 @@ import {
   Trans,
   Link,
 } from "gatsby-plugin-react-i18next"
-import ThemeToggle from "./DarkToggle"
+import ThemeToggle from "./Themes"
 import Logo from "../svg/logo1.svg"
 import Logo2 from "../svg/logo2.svg"
 
@@ -27,11 +27,12 @@ const Header = () => {
   return (
     <>
       <div className="flex items-center justify-center w-full">
+        <Logo className="w-16 h-16" />
         <Logo2 className="w-24 h-24" />
       </div>
-      <div className="navbar bg-primario">
+      <header className="sticky top-0 h-16 navbar bg-neutral text-neutral-content">
         <div className="navbar-start">
-          <div className="dropdown">
+          <nav className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -60,15 +61,15 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          <Link className="btn btn-ghost" to="/">
-            <Logo className="w-12 h-12" />
+          <Link className="btn btn-primary" to="/">
+            Aldameros
           </Link>
 
           <ThemeToggle />
         </div>
-        <div className="hidden navbar-center lg:flex">
+        <nav className="hidden navbar-center lg:flex">
           <ul className="p-0 menu menu-horizontal">
             {navLinks.map(({ url, i18n_id }, index) => (
               <li key={index}>
@@ -78,13 +79,13 @@ const Header = () => {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
         <div className="navbar-end">
-          <Link className="btn" to="/adoption">
+          <Link className="btn btn-secondary" to="/adoption">
             Adoptar
           </Link>
         </div>
-      </div>
+      </header>
     </>
   )
 }
