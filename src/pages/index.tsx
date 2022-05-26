@@ -1,23 +1,19 @@
 import React from "react"
 import { graphql } from "gatsby"
 import { useTranslation, useI18next, Trans } from "gatsby-plugin-react-i18next"
-import Footer from "../components/Footer"
+import Layout from "../components/Layout"
 import Seo from "../components/Seo"
-import Language from "../components/Language"
-import DarkToggle from "../components/DarkToggle"
 
 const Home = () => {
   const { t } = useTranslation()
   const { language } = useI18next()
 
   return (
-    <>
+    <Layout>
       <Seo lang={language} title={t("Aldameros")} />
-      <main className="container flex flex-col items-center justify-center w-full mx-auto text-primario bg-fondo">
-        <h1>Aldameros</h1>
-      </main>
-      <Footer />
-    </>
+
+      <h1>Aldameros</h1>
+    </Layout>
   )
 }
 

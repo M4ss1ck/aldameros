@@ -1,20 +1,6 @@
 import React, { useEffect } from "react"
 import { Listbox, Transition } from "@headlessui/react"
-import { ThemeToggler } from "gatsby-plugin-dark-mode"
 import { useTranslation } from "gatsby-plugin-react-i18next"
-import { themeChange } from "theme-change"
-
-interface Props {
-  theme: string
-  toggleTheme: (theme: string) => void
-}
-
-const themes = [
-  { value: "light", label: "light" },
-  { value: "dark", label: "dark" },
-  { value: "pink", label: "pink" },
-  { value: "classic", label: "classic" },
-]
 
 const daisyUIThemes = [
   "light",
@@ -70,7 +56,7 @@ const Themes: React.FC = () => {
   }
 
   return (
-    <div className="flex flex-row items-center justify-center m-auto">
+    <div className="relative flex flex-row items-center justify-center ml-4 mr-auto">
       <Listbox value={theme} onChange={handleChange}>
         <div className="relative">
           <Listbox.Label hidden>Select a theme</Listbox.Label>
@@ -96,7 +82,10 @@ const Themes: React.FC = () => {
             leaveFrom="transform scale-100 opacity-100"
             leaveTo="transform scale-95 opacity-0"
           >
-            <Listbox.Options className="absolute flex flex-col items-center justify-end py-1 mt-1 overflow-auto text-base rounded-md shadow-lg bg-fondo shadow-primario max-h-60 ring-1 ring-primario ring-opacity-5 focus:outline-none sm:text-sm w-max">
+            <Listbox.Options
+              className="absolute top-0 left-0 block overflow-y-auto h-52"
+              tabIndex={0}
+            >
               {daisyUIThemes.map(currentTheme => (
                 <Listbox.Option
                   key={currentTheme}
@@ -106,9 +95,8 @@ const Themes: React.FC = () => {
                 >
                   {({ active, selected }) => (
                     <li
-                      className={`relative cursor-default flex-nowrap w-full select-none py-2 px-2 flex flex-row items-center justify-end ${
-                        active ? "bg-primario text-fondo" : ""
-                      }`}
+                      data-theme={currentTheme}
+                      className={`relative cursor-default flex-nowrap w-full select-none py-2 px-2 flex flex-row items-center justify-end`}
                     >
                       {selected && (
                         <svg

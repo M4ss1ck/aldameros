@@ -1,9 +1,4 @@
 @tailwind base;
-@layer base {
-  body.dark {
-    background: black;
-  }
-}
 @tailwind components;
 @tailwind utilities;
 
@@ -33,4 +28,12 @@
   .scrollbar::-webkit-scrollbar-track:active {
     background: transparent;
   }
+}
+
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *:before,
+html.theme-transition *:after {
+  transition: all 750ms !important;
+  transition-delay: 0 !important;
 }

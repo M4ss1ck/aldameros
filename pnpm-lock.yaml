@@ -38,6 +38,7 @@ specifiers:
   react-to-pdf: ^0.0.14
   tailwindcss: ^3.0.23
   tailwindcss-themer: ^1.1.0
+  theme-change: ^2.0.2
   typescript: ^4.6.2
   usehooks-ts: ^2.4.2
 
@@ -66,6 +67,7 @@ dependencies:
   react-i18next: 11.15.5_r7kwr2ojdpqtlsigoxhwg6xxy4
   react-images-uploading: 3.1.6_sfoxds7t5ydpegc3knd667wn6m
   react-to-pdf: 0.0.14_sfoxds7t5ydpegc3knd667wn6m
+  theme-change: 2.0.2
   usehooks-ts: 2.4.2_react@17.0.2
 
 devDependencies:
@@ -11631,6 +11633,10 @@ packages:
 
   /text-table/0.2.0:
     resolution: {integrity: sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=}
+    dev: false
+
+  /theme-change/2.0.2:
+    resolution: {integrity: sha512-YvQqavf8nlGB3J7PdO0zLLhSLlgYhrqZL6By3FuzFIlWBsPTSPG/V98cHJllK3mmU97Jecei8XYiHalhy2umUw==}
     dev: false
 
   /through/2.3.8:
