@@ -36,9 +36,13 @@ const daisyUIThemes = [
 
 const Themes: React.FC = () => {
   const { t } = useTranslation()
-  // useEffect(() => {
-  //   themeChange(false)
-  // }, [])
+
+  useEffect(() => {
+    const theme = localStorage.getItem("theme")
+    if (theme != undefined && theme != "") {
+      document.documentElement.setAttribute("data-theme", theme)
+    }
+  }, [])
 
   const initialTheme =
     localStorage.getItem("theme") ||
