@@ -30,7 +30,7 @@ const Header = () => {
         <Logo className="w-16 h-16" />
         <Logo2 className="w-24 h-24" />
       </div>
-      <header className="sticky top-0 h-16 navbar">
+      <header className="sticky top-0 z-50 h-16 navbar bg-base-300">
         <div className="navbar-start">
           <nav className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
