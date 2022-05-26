@@ -30,7 +30,7 @@ const Header = () => {
         <Logo className="w-16 h-16" />
         <Logo2 className="w-24 h-24" />
       </div>
-      <header className="sticky top-0 h-16 navbar bg-neutral text-neutral-content">
+      <header className="sticky top-0 h-16 navbar">
         <div className="navbar-start">
           <nav className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -63,7 +63,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <Link className="btn btn-primary" to="/">
+          <Link className="btn btn-info" to="/">
             Aldameros
           </Link>
 
@@ -81,7 +81,7 @@ const Header = () => {
           </ul>
         </nav>
         <div className="navbar-end">
-          <Link className="btn btn-secondary" to="/adoption">
+          <Link className="btn btn-primary" to="/adoption">
             Adoptar
           </Link>
         </div>
